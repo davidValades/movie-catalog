@@ -1,45 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Catalog | Inicio</title>
-    <link rel="stylesheet" href="/movie-catalog/assets/css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/movie-catalog/assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
     <header class="navbar">
-        <div class="logo">🎬 MovieApp</div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="pages/catalogo.html">Catálogo</a></li>
-                <li><a href="pages/categorias.html">Categorías</a></li>
-            </ul>
-        </nav>
+      <div class="logo">🎬 MovieApp</div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="pages/catalogo.html">Catálogo</a></li>
+          <li><button id="theme-toggle" class="btn-theme">☀️</button></li>
+        </ul>
+      </nav>
     </header>
 
+    <!-- Contenido principal -->
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Dune: Parte Dos</h1>
-                <p>El viaje mítico de Paul Atreides...</p>
-                <a href="pages/detalles.html" class="btn btn-primary">Ver Detalles</a>
-            </div>
-        </section>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Dune: Parte Dos</h1>
+          <p>El viaje mítico de Paul Atreides...</p>
+          <a href="pages/detalles.html" class="btn btn-primary">Ver Detalles</a>
+        </div>
+      </section>
 
-        <section class="carrousel-section">
-            <h2>Estrenos Recientes</h2>
-            <div class="movie-grid">
-                <article class="movie-card">
-                    <img src="./assets/images/dune2.jpg" alt="Póster Película 1">
-                    <h3>Título Película</h3>
-                </article>
-                </div>
-        </section>
+      <section class="carousel-section">
+        <h2>Últimos Estrenos</h2>
+
+        <div class="carousel-track">
+          <article class="movie-disk">
+            <img
+              src="assets/images/proyecto-salvacion.webp"
+              alt="Proyecto Salvación"
+            />
+          </article>
+          <article class="movie-disk">
+            <img src="assets/images/supermario.webp" alt="Super Mario Bros" />
+          </article>
+          <article class="movie-disk">
+            <img
+              src="assets/images/torrentepresidente.webp"
+              alt="Torrente Presidente"
+            />
+          </article>
+          <article class="movie-disk">
+            <img src="assets/images/ramonycajal.webp" alt="Ramon y Cajal" />
+          </article>
+          <article class="movie-disk">
+            <img src="assets/images/hopper.webp" alt="Hopper" />
+          </article>
+          <article class="movie-disk">
+            <img src="assets/images/amarganavidad.webp" alt="Amarga Navidad" />
+          </article>
+        </div>
+      </section>
     </main>
 
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2026 Movie Catalog. Proyecto Interfaces.</p>
+      <p>&copy; 2026 Movie Catalog. Proyecto Interfaces.</p>
     </footer>
-</body>
+
+    <script src="/movie-catalog/assets/js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </body>
 </html>
