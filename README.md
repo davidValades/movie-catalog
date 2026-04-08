@@ -28,3 +28,49 @@ movie-catalog/
     ├── css/                # Hojas de estilo modulares
     ├── js/                 # Lógica dinámica
     └── images/             # Posters e iconos
+```
+
+## 📖 Guía Rápida para el Equipo (Comandos Git)
+
+Si tienes dudas sobre cómo aportar tu código, sigue estos pasos:
+
+1. Preparar el terreno (Solo la primera vez)
+Clona el repositorio en tu ordenador:
+
+```Bash
+git clone https://github.com/davidValades/movie-catalog.git
+cd movie-catalog
+```
+
+2. Antes de empezar a programar
+Asegúrate de estar en la rama main y de tener la última versión del código de tus compañeros:
+
+```Bash
+git checkout main
+git pull
+```
+
+3. Crear tu rama de trabajo
+Nunca trabajes en main. Crea una rama con un nombre descriptivo de lo que vas a hacer (usa feature/ para nuevas cosas o fix/ para arreglar errores):
+
+```Bash
+git checkout -b feature/nombre-de-tu-tarea
+```
+
+4. Guardar tus cambios
+A medida que vayas terminando tu código HTML o CSS, guarda tu progreso:
+
+```Bash
+git add .
+git commit -m "feat: añade descripción clara de lo que hiciste"
+```
+
+5. Subir tu rama a GitHub
+Cuando hayas terminado tu tarea y quieras que el equipo la revise:
+
+```Bash
+git push origin feature/nombre-de-tu-tarea
+```
+
+6. Pull Request (PR)
+Ve a la página del repositorio en GitHub. Verás un botón verde para crear un Pull Request. Ábrelo, avisa al equipo por vuestro chat para que lo revisen, y una vez aprobado, ¡lo integraremos en main!
