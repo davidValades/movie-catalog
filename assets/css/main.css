@@ -1,20 +1,70 @@
+/* Paleta de colores */
 :root {
-    --bg-color: #141414;
-    --text-color: #ffffff;
-    --primary-color: #E50914;
-    --secondary-color: #564d4d;
-    --font-main: 'Inter', system-ui, sans-serif;
-    --spacing-md: 1.5rem;
-    --border-radius: 8px;
+  --bg-color: #141414;
+  --text-color: #ffffff;
+  --primary-color: #e50914;
+  --secondary-color: #564d4d;
+  --font-main: "Inter", system-ui, sans-serif;
+  --spacing-md: 1.5rem;
+  --border-radius: 8px;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-main);
-    margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  margin: 0;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-div{
-    background-color: var(--bg-color);
+/* carousel */
+.carousel-section {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.carousel-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  padding: 2rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-disk {
+  flex: 0 0 auto;
+  width: 220px;
+  scroll-snap-align: center;
+  cursor: pointer;
+  transform: perspective(800px) rotateY(25deg) scale(0.9);
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+  filter: brightness(0.6);
+}
+
+.movie-disk img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 12px;
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.movie-disk:hover {
+  transform: perspective(800px) rotateY(0deg) scale(1.1);
+  filter: brightness(1);
+  z-index: 10;
 }
