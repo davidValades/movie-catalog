@@ -1,5 +1,7 @@
 # 🎬 Movie Catalog App
 
+![Status](https://img.shields.io/badge/Estado-En_Progreso_🚀-2ea44f?style=for-the-badge)
+
 ¡Bienvenido al repositorio de Movie Catalog! Un proyecto colaborativo desarrollado para aprender y dominar la maquetación web (Frontend) y el control de versiones en equipo.
 
 ## 🎯 Objetivo del Proyecto
@@ -8,9 +10,9 @@ Crear una plataforma web atractiva y funcional que actúe como un catálogo de p
 
 ## 🛠️ Tecnologías (Tech Stack)
 
-* **Estructura:** HTML5
-* **Estilos:** CSS3 (Flexbox & Grid)
-* **Control de Versiones:** Git & GitHub
+- **Estructura:** HTML5
+- **Estilos:** CSS3 (Flexbox & Grid)
+- **Control de Versiones:** Git & GitHub
 
 ## 📂 Arquitectura del Proyecto
 
@@ -35,7 +37,7 @@ movie-catalog/
 Si tienes dudas sobre cómo aportar tu código, sigue estos pasos:
 
 1. Preparar el terreno (Solo la primera vez)
-Clona el repositorio en tu ordenador:
+   Clona el repositorio en tu ordenador:
 
 ```Bash
 git clone https://github.com/davidValades/movie-catalog.git
@@ -43,7 +45,7 @@ cd movie-catalog
 ```
 
 2. Antes de empezar a programar
-Asegúrate de estar en la rama main y de tener la última versión del código de tus compañeros:
+   Asegúrate de estar en la rama main y de tener la última versión del código de tus compañeros:
 
 ```Bash
 git checkout main
@@ -51,14 +53,14 @@ git pull
 ```
 
 3. Crear tu rama de trabajo
-Nunca trabajes en main. Crea una rama con un nombre descriptivo de lo que vas a hacer (usa feature/ para nuevas cosas o fix/ para arreglar errores):
+   Nunca trabajes en main. Crea una rama con un nombre descriptivo de lo que vas a hacer (usa feature/ para nuevas cosas o fix/ para arreglar errores):
 
 ```Bash
 git checkout -b feature/nombre-de-tu-tarea
 ```
 
 4. Guardar tus cambios
-A medida que vayas terminando tu código HTML o CSS, guarda tu progreso:
+   A medida que vayas terminando tu código HTML o CSS, guarda tu progreso:
 
 ```Bash
 git add .
@@ -66,11 +68,11 @@ git commit -m "feat: añade descripción clara de lo que hiciste"
 ```
 
 5. Subir tu rama a GitHub
-Cuando hayas terminado tu tarea y quieras que el equipo la revise:
+   Cuando hayas terminado tu tarea y quieras que el equipo la revise:
 
 ```Bash
 git push origin feature/nombre-de-tu-tarea
 ```
 
 6. Pull Request (PR)
-Ve a la página del repositorio en GitHub. Verás un botón verde para crear un Pull Request. Ábrelo, avisa al equipo por vuestro chat para que lo revisen, y una vez aprobado, ¡lo integraremos en main!
+   Ve a la página del repositorio en GitHub. Verás un botón verde para crear un Pull Request. Ábrelo, avisa al equipo por vuestro chat para que lo revisen, y una vez aprobado, ¡lo integraremos en main!
