@@ -9,6 +9,67 @@
   --border-radius: 8px;
 }
 
+/* Header */
+header.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4 rem;
+}
+
+header.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+header.navbar nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+header.navbar nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease;
+}
+
+header.navbar nav a:hover,
+header.navbar nav a.active {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.btn-theme {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.btn-theme:hover {
+  opacity: 1;
+}
+
+/* estilos globales */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -30,41 +91,59 @@ body {
   font-size: 2rem;
 }
 
+/* pista de desplazamiento */
 .carousel-track {
   display: flex;
-  gap: 15px;
-  padding: 2rem 0;
+  gap: 70px;
+  padding: 5rem 40vw;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  scrollbar-width: none; /* ocultar scrollbar en Firefox */
+  scroll-behavior: smooth;
 }
 
 .carousel-track::-webkit-scrollbar {
-  display: none;
+  display: none; /* ocultar scrollbar en Chrome, Safari y Edge */
 }
 
+/* tarjetas de película */
 .movie-disk {
   flex: 0 0 auto;
   width: 220px;
   scroll-snap-align: center;
-  cursor: pointer;
-  transform: perspective(800px) rotateY(25deg) scale(0.9);
-  transition:
-    transform 0.4s ease,
-    filter 0.4s ease;
-  filter: brightness(0.6);
+  animation: cover-flow linear both;
+  animation-timeline: view(inline);
+  border-radius: var(--border-radius);
+  transform-style: preserve-3d;
 }
 
 .movie-disk img {
+  display: block;
   width: 100%;
   aspect-ratio: 2 / 3;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
   object-fit: cover;
 }
 
-.movie-disk:hover {
-  transform: perspective(800px) rotateY(0deg) scale(1.1);
-  filter: brightness(1);
-  z-index: 10;
+/* animaciones */
+@keyframes cover-flow {
+  0% {
+    /* Efecto de giro y escala para las tarjetas laterales */
+    transform: perspective(800px) rotateY(-45deg) scale(0.8);
+    filter: brightness(0.1);
+    z-index: 0;
+  }
+  50% {
+    /* Efecto de giro y escala para la tarjeta central */
+    transform: perspective(800px) rotateY(0deg) scale(1.5);
+    filter: brightness(1);
+    z-index: 10;
+  }
+  100% {
+    /* Efecto de giro y escala para las tarjetas laterales */
+    transform: perspective(800px) rotateY(45deg) scale(0.8);
+    filter: brightness(0.1);
+    z-index: 0;
+  }
 }
