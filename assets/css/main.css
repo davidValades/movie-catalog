@@ -1,33 +1,40 @@
 /* Paleta de colores */
 :root {
-  --bg-color: #1a1a1a;
+  --bg-color: #181818;
+  --navbar-bg: #222121;
   --text-color: #ffffff;
-  --primary-color: rgb(3, 175, 243);
+  --primary-color: rgb(3, 127, 243);
   --font-main: "Inter", system-ui, sans-serif;
   --spacing-md: 1.5rem;
   --border-radius: 8px;
 }
 
 :root.light {
-    --bg-color: #f4f4f9;
-    --text-color: #1a1a1a;
-    --primary-color: rgb(3, 175, 243); 
-    --navbar-bg: #ffffff;
-    --card-bg: #e0e0e0;
+  --bg-color: #f8f7f3;
+  --navbar-bg: #e6dace;
+  --text-color: #2b2b2b;
+  --primary-color: rgb(3, 127, 243);
+  --navbar-bg: #ffffff;
+  --card-bg: #dfddd3;
 }
 
 /* Header */
 header.navbar {
   display: flex;
   position: sticky;
-  top: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
+  background-color: color-mix(in srgb, var(--navbar-bg) 95%, transparent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
 }
 
 header.navbar .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--primary-color);
   display: flex;
@@ -78,10 +85,12 @@ header.navbar nav a.active {
 
 /* estilos globales */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', system-ui, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al cambiar de modo */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", system-ui, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Transición suave al cambiar de modo */
 }
 
 /* carousel */
@@ -153,11 +162,10 @@ body {
 }
 
 /* toggle theme */
-/* toggle theme */
 ::view-transition-group(root) {
   animation-duration: 0.7s;
   /* Corregimos la variable por una curva de aceleración real */
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); 
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 🌙 CUANDO VOLVEMOS AL MODO OSCURO (Sin clase .light) */
@@ -198,4 +206,33 @@ body {
   to {
     clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
   }
+}
+
+/* --- SECCIÓN TOP 10 (Números Automáticos) --- */
+.top10-track {
+  counter-reset: ranking;
+}
+
+.top10-track .movie-disk {
+  position: relative;
+  margin-left: 3rem;
+}
+
+.top10-track .movie-disk::before {
+  counter-increment: ranking;
+  content: counter(ranking);
+  position: absolute;
+  left: -25px;
+  bottom: 10px;
+  z-index: 20;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  font-family: "Arial Black", sans-serif;
+  color: var(--bg-color);
+  -webkit-text-stroke: 4px var(--text-color);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  transition:
+    color 0.3s ease,
+    -webkit-text-stroke 0.3s ease;
 }
