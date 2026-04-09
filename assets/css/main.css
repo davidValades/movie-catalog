@@ -162,7 +162,6 @@ body {
 }
 
 /* toggle theme */
-/* toggle theme */
 ::view-transition-group(root) {
   animation-duration: 0.7s;
   /* Corregimos la variable por una curva de aceleración real */
@@ -207,4 +206,33 @@ body {
   to {
     clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
   }
+}
+
+/* --- SECCIÓN TOP 10 (Números Automáticos) --- */
+.top10-track {
+  counter-reset: ranking;
+}
+
+.top10-track .movie-disk {
+  position: relative;
+  margin-left: 3rem;
+}
+
+.top10-track .movie-disk::before {
+  counter-increment: ranking;
+  content: counter(ranking);
+  position: absolute;
+  left: -25px;
+  bottom: 10px;
+  z-index: 20;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  font-family: "Arial Black", sans-serif;
+  color: var(--bg-color);
+  -webkit-text-stroke: 4px var(--text-color);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+  transition:
+    color 0.3s ease,
+    -webkit-text-stroke 0.3s ease;
 }
