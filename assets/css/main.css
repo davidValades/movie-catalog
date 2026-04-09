@@ -11,7 +11,7 @@
 :root.light {
     --bg-color: #f4f4f9;
     --text-color: #1a1a1a;
-    --primary-color: #D20812; 
+    --primary-color: rgb(3, 175, 243); 
     --navbar-bg: #ffffff;
     --card-bg: #e0e0e0;
 }
@@ -20,7 +20,7 @@
 header.navbar {
   display: flex;
   position: sticky;
-  top: 0.5rem;
+  top: 1rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
