@@ -8,6 +8,14 @@
   --border-radius: 8px;
 }
 
+[data-theme="light"] {
+    --bg-color: #f4f4f9;
+    --text-color: #1a1a1a;
+    --primary-color: #D20812; /* Un rojo un poco más oscuro para que resalte en blanco */
+    --navbar-bg: #ffffff;
+    --card-bg: #e0e0e0;
+}
+
 /* Header */
 header.navbar {
   display: flex;
@@ -70,13 +78,10 @@ header.navbar nav a.active {
 
 /* estilos globales */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-main);
-  margin: 0;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al cambiar de modo */
 }
 
 /* carousel */
@@ -144,5 +149,53 @@ body {
     transform: perspective(800px) rotateY(45deg) scale(0.8);
     filter: brightness(0.1);
     z-index: 0;
+  }
+}
+
+/* toggle theme */
+/* toggle theme */
+::view-transition-group(root) {
+  animation-duration: 0.7s;
+  /* Corregimos la variable por una curva de aceleración real */
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); 
+}
+
+/* 🌙 CUANDO VOLVEMOS AL MODO OSCURO (Sin clase .light) */
+::view-transition-new(root) {
+  animation-name: reveal-dark;
+  animation-fill-mode: both;
+}
+::view-transition-old(root) {
+  animation: none;
+  animation-fill-mode: both;
+  z-index: -1;
+}
+
+/* ☀️ CUANDO PASAMOS AL MODO CLARO (Tiene clase .light) */
+.light::view-transition-new(root) {
+  animation-name: reveal-light;
+  animation-fill-mode: both;
+}
+.light::view-transition-old(root) {
+  animation: none;
+  animation-fill-mode: both;
+  z-index: -1;
+}
+
+@keyframes reveal-dark {
+  from {
+    clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+  }
+  to {
+    clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+  }
+}
+
+@keyframes reveal-light {
+  from {
+    clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+  }
+  to {
+    clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
   }
 }
