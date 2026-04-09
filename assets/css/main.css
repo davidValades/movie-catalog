@@ -2,32 +2,40 @@
 :root {
   --bg-color: #1a1a1a;
   --text-color: #ffffff;
-  --primary-color: rgb(3, 175, 243);
+  --primary-color: rgb(3, 127, 243);
   --font-main: "Inter", system-ui, sans-serif;
   --spacing-md: 1.5rem;
   --border-radius: 8px;
 }
 
 :root.light {
-    --bg-color: #f4f4f9;
-    --text-color: #1a1a1a;
-    --primary-color: #D20812; 
-    --navbar-bg: #ffffff;
-    --card-bg: #e0e0e0;
+  --bg-color: #f4f4f9;
+  --text-color: #1a1a1a;
+  --primary-color: rgb(3, 127, 243);
+  --navbar-bg: #ffffff;
+  --card-bg: #e0e0e0;
 }
 
 /* Header */
+header {
+  left: 0;
+  background-color: var(--navbar-bg, var(--bg-color));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: var(--border-radius);
+}
+
 header.navbar {
   display: flex;
   position: sticky;
   top: 0.5rem;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
 }
 
 header.navbar .logo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--primary-color);
   display: flex;
@@ -78,10 +86,12 @@ header.navbar nav a.active {
 
 /* estilos globales */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', system-ui, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave al cambiar de modo */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", system-ui, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Transición suave al cambiar de modo */
 }
 
 /* carousel */
@@ -157,7 +167,7 @@ body {
 ::view-transition-group(root) {
   animation-duration: 0.7s;
   /* Corregimos la variable por una curva de aceleración real */
-  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); 
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 🌙 CUANDO VOLVEMOS AL MODO OSCURO (Sin clase .light) */
