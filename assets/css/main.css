@@ -8,10 +8,10 @@
   --border-radius: 8px;
 }
 
-[data-theme="light"] {
+:root.light {
     --bg-color: #f4f4f9;
     --text-color: #1a1a1a;
-    --primary-color: #D20812; /* Un rojo un poco más oscuro para que resalte en blanco */
+    --primary-color: #D20812; 
     --navbar-bg: #ffffff;
     --card-bg: #e0e0e0;
 }
@@ -23,7 +23,7 @@ header.navbar {
   top: 0.5rem;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4 rem;
+  padding: 1rem 4rem;
 }
 
 header.navbar .logo {
