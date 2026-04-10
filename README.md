@@ -11,8 +11,15 @@ Crear una plataforma web atractiva y funcional que actúe como un catálogo de p
 ## 🛠️ Tecnologías (Tech Stack)
 
 - **Estructura:** HTML5
+- **Lógica:** JavaScript
 - **Estilos:** CSS3 (Flexbox & Grid)
 - **Control de Versiones:** Git & GitHub
+
+## ✨ Características Principales
+
+- 🌗 **Modo Oscuro Persistente:** Alternancia de temas (Light/Dark) gestionada mediante clases CSS y `localStorage` para recordar la preferencia del usuario.
+- 🎬 **Animaciones Scroll-Driven:** Carrusel con efecto "cover-flow" 3D utilizando las últimas especificaciones de CSS (`animation-timeline: view`).
+- ⚡ **View Transitions API:** Transiciones fluidas y modernas al cambiar el tema de la aplicación, mejorando radicalmente la experiencia de usuario (UX).
 
 ## 📂 Arquitectura del Proyecto
 
@@ -25,10 +32,13 @@ movie-catalog/
 │   ├── catalogo.html
 │   ├── categorias.html
 │   ├── top10.html
+│   ├── topPremiadas.html
 │   └── detalles.html
 └── assets/                 # Recursos estáticos
     ├── css/                # Hojas de estilo modulares
-    ├── js/                 # Lógica dinámica
+    │   └── main.css
+    ├── js/                 # Lógica dinámica / localstorage
+    │   └── main.js
     └── images/             # Posters e iconos
 ```
 
