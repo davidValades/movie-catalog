@@ -1,3 +1,12 @@
+/* 1. RESETEO GLOBAL (Aplica a toda la web) */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Paleta de colores */
 :root {
   --bg-color: #181818;
@@ -11,26 +20,32 @@
 
 :root.light {
   --bg-color: #f8f7f3;
-  --navbar-bg: #e6dace;
+  --navbar-bg: #ffffff;
   --text-color: #2b2b2b;
-  --primary-color: rgb(3, 127, 243);
-  --navbar-bg: #f8f7f3;
+  --primary-color: rgb(
+    0,
+    183,
+    255
+  ); /* Mantenemos tu color principal unificado */
   --card-bg: #dfddd3;
 }
 
-/* Header */
+/* Header Navbar Flotante Premium */
 header.navbar {
   display: flex;
   position: sticky;
-  top: 0;
-  left: 0;
+  top: 0.1rem;
   z-index: 1000;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  margin: 1rem;
   background-color: color-mix(in srgb, var(--navbar-bg) 95%, transparent);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
+  border: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
 }
 
 header.navbar .logo {
@@ -41,13 +56,12 @@ header.navbar .logo {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 header.navbar nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
   gap: 2.5rem;
   align-items: center;
 }
@@ -76,11 +90,14 @@ header.navbar nav a.active {
   font-size: 1.2rem;
   cursor: pointer;
   opacity: 0.7;
-  transition: opacity 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .btn-theme:hover {
   opacity: 1;
+  transform: scale(1.1);
 }
 
 /* estilos globales */
