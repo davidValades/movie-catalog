@@ -13,6 +13,8 @@ function loadMovie(index) {
   document.getElementById("movie-score").textContent = movie.score;
   document.getElementById("movie-description").textContent = movie.description;
   document.getElementById("movie-curiosities").textContent = movie.curiosities;
+  document.getElementById("movie-poster").style.backgroundImage =
+    `url('${movie.image}')`;
 
   // 2. Cambiamos las imágenes dinámicamente
   document.getElementById("movie-poster").style.backgroundImage =
