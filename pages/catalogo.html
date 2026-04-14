@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Catalog | Catalogo</title>
+    <title>Movie Catalog | Catálogo</title>
     <link rel="stylesheet" href="/movie-catalog/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="/movie-catalog/assets/css/catalogo/style.css"
+    />
   </head>
   <body>
     <!-- Barra de navegación -->
@@ -36,20 +40,52 @@
 
       <nav>
         <ul>
-          <li><a href="/movie-catalog/index.html" class="active">Inicio</a></li>
-          <li><a href="/movie-catalog/pages/catalogo.html">Catálogo</a></li>
+          <li><a href="/movie-catalog/index.html">Inicio</a></li>
+          <li>
+            <a href="/movie-catalog/pages/catalogo.html" class="active"
+              >Catálogo</a
+            >
+          </li>
           <li><button id="theme-toggle" class="btn-theme">☀️</button></li>
         </ul>
       </nav>
     </header>
 
     <!-- Contenido principal -->
-    <main></main>
-    <script src="/movie-catalog/assets/js/main.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <main>
+      <section class="catalog-controls">
+        <h1 class="catalog-title">Nuestro Catálogo</h1>
+
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Buscar por título..."
+            autocomplete="off"
+          />
+          <ul id="autocomplete-list" class="autocomplete-list"></ul>
+        </div>
+
+        <div class="container-filtros" id="botones-filtro">
+          <button class="filtro-btn active" data-genero="Todos">Todos</button>
+          <button class="filtro-btn" data-genero="Acción">Acción</button>
+          <button class="filtro-btn" data-genero="Sci-Fi">Sci-Fi</button>
+          <button class="filtro-btn" data-genero="Drama">Drama</button>
+          <button class="filtro-btn" data-genero="Crimen">Crimen</button>
+        </div>
+      </section>
+
+      <section class="movies-grid" id="movies-grid"></section>
+    </main>
+
     <!-- Pie de página -->
     <footer>
       <p>&copy; 2026 Movie Catalog. Proyecto Interfaces.</p>
     </footer>
+    <script src="/movie-catalog/assets/js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/movie-catalog/assets/js/movies.js"></script>
+    <script src="/movie-catalog/assets/js/catalogo-logica.js"></script>
   </body>
 </html>

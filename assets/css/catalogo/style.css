@@ -1,0 +1,174 @@
+/* css/catalogo/style.css */
+
+.catalog-page {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 150px);
+}
+
+.catalog-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* --- Controles: Buscador y Filtros --- */
+.catalog-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--primary-color);
+  background-color: color-mix(in srgb, var(--bg-color) 80%, transparent);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.3);
+}
+
+/* --- Botones de Filtro --- */
+.container-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filtro-btn {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* LA CUADRÍCULA  */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.2rem;
+}
+
+.catalog-movie-card {
+  background-color: color-mix(in srgb, var(--navbar-bg) 95%, transparent);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.catalog-movie-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 183, 255, 0.2);
+  z-index: 2;
+  border-color: rgba(0, 183, 255, 0.3);
+}
+
+.catalog-movie-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.catalog-movie-info {
+  padding: 0.3rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-title {
+  font-size: 0.8rem;
+  font-weight: 620;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.card-year {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.card-rating {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.05rem 0.36rem;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+/* --- Lista de Autocompletado --- */
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--navbar-bg);
+  border-radius: 0 0 15px 15px;
+  list-style: none;
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.autocomplete-item {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.autocomplete-item:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
