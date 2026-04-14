@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Catalog | Detalles</title>
     <link rel="stylesheet" href="/movie-catalog/assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="/movie-catalog/assets/css/tarjetas/style.css"
+    />
   </head>
   <body>
-    <!-- Barra de navegación -->
     <header class="navbar">
       <a href="/movie-catalog/index.html" class="logo">
         <svg
@@ -42,13 +45,165 @@
       </nav>
     </header>
 
-    <!-- Contenido principal -->
-    <main></main>
-    <script src="/movie-catalog/assets/js/main.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Pie de página -->
+    <svg
+      style="width: 0; height: 0; position: absolute"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <linearGradient id="halfGradient">
+        <stop offset="50%" stop-color="#FFD700" />
+        <stop offset="50%" stop-color="rgba(255, 255, 255, 0.2)" />
+      </linearGradient>
+    </svg>
+
+    <main class="movie-detail-container">
+      <div class="movie-card">
+        <div class="movie-img-container">
+          <div
+            id="movie-poster"
+            class="movie-img"
+            style="
+              background-image: url(&quot;https://assets.codepen.io/406785/pulp1.avif&quot;);
+              background-position: center;
+              background-size: cover;
+            "
+          ></div>
+          <div class="movie-overlay"></div>
+        </div>
+
+        <div class="movie-content">
+          <div class="title-row">
+            <h1 class="movie-title" id="movie-title">
+              Pulp Fiction <span class="year-badge" id="movie-year">1994</span>
+            </h1>
+            <span class="rating-badge" id="movie-rating">R</span>
+          </div>
+
+          <div class="metadata">
+            <div class="duration">
+              <svg class="duration-icon" viewBox="0 0 24 24">
+                <path
+                  d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                />
+                <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+              </svg>
+              <span id="movie-duration">2h 34min</span>
+            </div>
+          </div>
+
+          <div class="genres" id="movie-genres">
+            <span class="genre-tag">Crimen</span>
+            <span class="genre-tag">Drama</span>
+          </div>
+
+          <div class="ratings-row">
+            <div class="star-rating">
+              <div class="stars">
+                <svg class="star star-filled" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"
+                  />
+                </svg>
+                <svg class="star star-filled" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"
+                  />
+                </svg>
+                <svg class="star star-filled" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"
+                  />
+                </svg>
+                <svg class="star star-filled" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"
+                  />
+                </svg>
+                <svg class="star star-half" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"
+                  />
+                </svg>
+              </div>
+              <span class="rating-text" id="movie-score">8.9/10</span>
+            </div>
+          </div>
+
+          <div class="movie-info-accordions">
+            <details class="custom-accordion" open>
+              <summary class="section-title">SUMMARY</summary>
+              <div class="accordion-content">
+                <p class="movie-description" id="movie-description">
+                  The lives of two mob hitmen...
+                </p>
+              </div>
+            </details>
+            <details class="custom-accordion">
+              <summary class="section-title">CURIOSIDADES</summary>
+              <div class="accordion-content">
+                <p class="movie-description" id="movie-curiosities">
+                  Datos curiosos aquí.
+                </p>
+              </div>
+            </details>
+            <details class="custom-accordion">
+              <summary class="section-title">CAST</summary>
+              <div class="accordion-content">
+                <div class="cast-list" id="movie-cast">
+                  <div class="cast-item">
+                    <img
+                      src="https://assets.codepen.io/406785/travolta.jpg"
+                      class="cast-photo"
+                      alt="Actor"
+                    />
+                    <span class="cast-name">John Travolta</span>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div class="action-row">
+            <div class="watch-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <span class="watch-btn-text">TRAILER</span>
+            </div>
+
+            <button id="prev-btn" class="action-btn" title="Anterior">
+              <svg class="action-icon" viewBox="0 0 24 24">
+                <path
+                  d="M15 18l-6-6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button id="next-btn" class="action-btn" title="Siguiente">
+              <svg class="action-icon" viewBox="0 0 24 24">
+                <path
+                  d="M9 18l6-6-6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <footer>
       <p>&copy; 2026 Movie Catalog. Proyecto Interfaces.</p>
     </footer>
+
+    <script src="/movie-catalog/assets/js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="/movie-catalog/assets/js/movies.js"></script>
+    <script src="/movie-catalog/assets/js/detalles-logica.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
   --bg-color: #181818;
   --navbar-bg: #222121;
   --text-color: #ffffff;
-  --primary-color: rgb(3, 127, 243);
+  --primary-color: rgb(0, 183, 255);
   --font-main: "Inter", system-ui, sans-serif;
   --spacing-md: 1.5rem;
   --border-radius: 8px;
@@ -14,7 +14,7 @@
   --navbar-bg: #e6dace;
   --text-color: #2b2b2b;
   --primary-color: rgb(3, 127, 243);
-  --navbar-bg: #ffffff;
+  --navbar-bg: #f8f7f3;
   --card-bg: #dfddd3;
 }
 
@@ -236,4 +236,3 @@ body {
     color 0.3s ease,
     -webkit-text-stroke 0.3s ease;
 }
-

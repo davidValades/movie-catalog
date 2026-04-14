@@ -1,11 +1,14 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* TEMA OSCURO*/
 :root {
-  --brand-color: #fe4141;
+  --brand-color: rgb(0, 183, 255);
   --dark-color: #1e1b26;
   --accent-color: #e7e7e7;
   --text-light: #b4b4b4;
@@ -13,23 +16,40 @@
   --section-space: 16px;
   --card-padding: 24px;
   --poster-overlay: rgba(30, 27, 38, 0.8);
+  --bg-overlay: rgba(30, 27, 38, 0.95);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --btn-bg: rgba(255, 255, 255, 0.05);
+  --btn-bg-hover: rgba(255, 255, 255, 0.1);
 }
 
-body {
-  background: linear-gradient(
-    rgba(30, 27, 38, 0.95), 
-    rgba(30, 27, 38, 0.95)
-  ), url("https://assets.codepen.io/406785/pulp2.jpg");
+/*TEMA CLARO */
+:root.light {
+  --dark-color: #f8f7f3;
+  --accent-color: #181818;
+  --text-light: #555555;
+  --text-lighter: #2b2b2b;
+  --poster-overlay: rgba(255, 255, 255, 0.13);
+  --bg-overlay: rgba(248, 247, 243, 0.95);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --btn-bg: rgba(0, 0, 0, 0.05);
+  --btn-bg-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* Fuentes */
+.movie-detail-container {
+  background-image:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    var(--dynamic-bg, url("https://assets.codepen.io/406785/pulp2.jpg"));
   background-position: center;
   background-size: cover;
-  background-repeat: repeat;
-  font-family: 'Open Sans', sans-serif;
+  background-attachment: fixed;
+  font-family: "Open Sans", sans-serif;
   color: var(--accent-color);
-  min-height: 100vh;
+  min-height: calc(100vh - 150px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 a {
@@ -39,12 +59,12 @@ a {
 
 .movie-card {
   width: 100%;
-/*   max-width: 450px; */
   background-color: var(--dark-color);
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
   position: relative;
+  transition: background-color 0.3s ease;
 }
 
 .movie-img-container {
@@ -56,8 +76,8 @@ a {
 .movie-img {
   height: 100%;
   width: 100%;
-  background: url("https://assets.codepen.io/406785/pulp1.avif") no-repeat;
   background-position: 37% 23% !important;
+  background-size: cover !important;
 }
 
 .movie-overlay {
@@ -68,9 +88,9 @@ a {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(30,27,38,0) 30%,
-    rgba(30,27,38,0.7) 60%,
-    rgba(30,27,38,1) 100%
+    transparent 30%,
+    color-mix(in srgb, var(--dark-color) 70%, transparent) 60%,
+    var(--dark-color) 100%
   );
   z-index: 1;
 }
@@ -90,17 +110,17 @@ a {
 }
 
 .movie-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  color: var(--accent-color);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   flex: 1;
   line-height: 1.2;
 }
 
 .year-badge {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: var(--text-lighter);
@@ -113,11 +133,11 @@ a {
   color: white;
   padding: 2px 8px;
   border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: 600;
   margin-top: 3px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.5px;
 }
 
@@ -150,8 +170,8 @@ a {
 }
 
 .genre-tag {
-  background-color: rgba(254, 65, 65, 0.1);
-  border: 1px solid rgba(254, 65, 65, 0.3);
+  background-color: rgba(0, 183, 255, 0.1);
+  border: 1px solid rgba(0, 183, 255, 0.3);
   padding: 3px 10px;
   border-radius: 16px;
   font-size: 11px;
@@ -166,7 +186,7 @@ a {
   align-items: center;
   margin-bottom: var(--section-space);
   padding-bottom: var(--section-space);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .star-rating {
@@ -185,15 +205,11 @@ a {
 }
 
 .star-filled {
-  fill: #FFD700;
+  fill: #ffd700;
 }
 
 .star-half {
   fill: url(#halfGradient);
-}
-
-.star-empty {
-  fill: rgba(255, 255, 255, 0.2);
 }
 
 .rating-text {
@@ -203,39 +219,69 @@ a {
   margin-left: 8px;
 }
 
-.likes {
+/*SECCIÓN ACORDEONES SEMÁNTICOS */
+
+.movie-info-accordions {
   display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 5px 10px;
-  border-radius: 20px;
-  transition: background-color 0.2s ease;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
 }
 
-.heart-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
-  fill: var(--brand-color);
-}
-
-.likes-count {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-light);
-}
-
-.description-section {
-  margin-bottom: var(--section-space);
-}
-
-.section-title {
-  font-family: 'Montserrat', sans-serif;
+.custom-accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 10px;
   color: var(--text-lighter);
+}
+
+.custom-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.custom-accordion summary:hover {
+  color: var(--brand-color);
+}
+
+/* Indicador personalizado */
+.custom-accordion summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: var(--brand-color);
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+/* Indicador cuando está abierto */
+.custom-accordion[open] summary::after {
+  content: "-";
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 1rem 0;
+  animation: fade-in 0.4s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .movie-description {
@@ -245,9 +291,7 @@ a {
   text-align: justify;
 }
 
-.cast-section {
-  margin-bottom: var(--section-space);
-}
+/* CASTING  */
 
 .cast-list {
   display: flex;
@@ -268,7 +312,7 @@ a {
   border-radius: 4px;
   margin-bottom: 5px;
   object-fit: cover;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cast-name {
@@ -279,9 +323,10 @@ a {
   white-space: wrap;
 }
 
+/* BOTONES DE ACCIÓN */
 .action-row {
   display: grid;
-  grid-template-columns: 1fr repeat(3, auto);
+  grid-template-columns: 1fr auto auto;
   gap: 10px;
   align-items: center;
   margin-top: 10px;
@@ -297,20 +342,20 @@ a {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(254, 65, 65, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 183, 255, 0.3);
 }
 
 .watch-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(254, 65, 65, 0.4);
-  background-color: #ff5151;
+  box-shadow: 0 6px 12px rgba(0, 183, 255, 0.4);
+  background-color: rgb(0, 150, 220);
 }
 
 .watch-btn-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-left: 8px;
 }
 
@@ -321,25 +366,29 @@ a {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--btn-bg);
+  border: 1px solid transparent;
   border-radius: 4px;
   transition: all 0.2s ease;
+  color: var(--text-lighter);
 }
 
 .action-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--btn-bg-hover);
+  border-color: var(--border-color);
   transform: translateY(-2px);
 }
 
 .action-icon {
   width: 18px;
   height: 18px;
-  fill: var(--text-lighter);
+  fill: currentColor;
 }
 
+/*RESPONSIVE  */
 @media (min-width: 768px) {
   .movie-card {
-    max-width: 650px;
+    max-width: 750px;
     display: flex;
   }
 
@@ -354,10 +403,6 @@ a {
   }
 
   .movie-overlay {
-    background: linear-gradient(
-      90deg, 
-      rgba(30,27,38,0) 0%, 
-      var(--poster-overlay) 100%
-    );
+    background: linear-gradient(90deg, transparent 0%, var(--dark-color) 100%);
   }
 }
