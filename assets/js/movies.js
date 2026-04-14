@@ -1,71 +1,49 @@
-// assets/js/detalles-logica.js
+// assets/js/movies.js
 
-// 1. Variable para saber en qué película estamos (0 es la primera película de nuestro array)
-let currentIndex = 0;
+const movies = [
+  {
+    id: 1,
+    title: "Pulp Fiction",
+    year: "1994",
+    rating: "R",
+    duration: "2h 34min",
+    score: "8.9/10",
+    genres: ["Crimen", "Drama"], // Usamos un array interior para múltiples géneros
+    image: "../../assets/images/pulpFiction.webp", // Ruta a tu imagen
+    description:
+      "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    curiosities: "La palabra 'fuck' se usa 265 veces durante la película.",
+    cast: [
+      {
+        name: "John Travolta",
+        photo: "https://assets.codepen.io/406785/travolta.jpg",
+      },
+      {
+        name: "Samuel L. Jackson",
+        photo: "https://assets.codepen.io/406785/jackson.jpeg",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "El Caballero Oscuro",
+    year: "2008",
+    rating: "PG-13",
+    duration: "2h 32min",
+    score: "9.0/10",
+    genres: ["Acción", "Crimen", "Drama"],
+    image: "../../assets/images/elCaballeroOscuro.webp",
+    description:
+      "Cuando la amenaza conocida como el Joker emerge de su misterioso pasado, causa estragos y caos en la gente de Gotham.",
+    curiosities:
+      "Heath Ledger se encerró en una habitación de hotel durante semanas para preparar la psicología del Joker.",
+    cast: [
+      { name: "Christian Bale", photo: "ruta_foto_bale.jpg" }, // Puedes rellenar esto luego
+      { name: "Heath Ledger", photo: "ruta_foto_ledger.jpg" },
+    ],
+  },
+  // Aquí irías añadiendo el resto de películas separadas por comas...
+];
 
-// 2. Esta es la función principal que coge los datos de movies.js y los inyecta en el HTML
-function loadMovie(index) {
-  // Sacamos la película correspondiente del array
-  const movie = movies[index];
-
-  // Inyectamos los textos simples buscando el ID correspondiente en el HTML
-  document.getElementById("movie-title").textContent = movie.title;
-  document.getElementById("movie-year").textContent = movie.year;
-  document.getElementById("movie-rating").textContent = movie.rating;
-  document.getElementById("movie-duration").textContent = movie.duration;
-  document.getElementById("movie-score").textContent = movie.score;
-  document.getElementById("movie-description").textContent = movie.description;
-  document.getElementById("movie-curiosities").textContent = movie.curiosities;
-
-  // Cambiamos la imagen de la tarjeta pequeña
-  document.getElementById("movie-poster").style.backgroundImage =
-    `url('${movie.image}')`;
-
-  // 🚀 MAGIA EXTRA: Cambiamos también el fondo gigante de toda la pantalla
-  const container = document.querySelector(".movie-detail-container");
-  container.style.backgroundImage = `linear-gradient(rgba(30, 27, 38, 0.95), rgba(30, 27, 38, 0.95)), url('${movie.image}')`;
-
-  // --- INYECTAR GÉNEROS DINÁMICAMENTE ---
-  const genresContainer = document.getElementById("movie-genres");
-  genresContainer.innerHTML = ""; // Limpiamos los géneros de la película anterior
-
-  // Recorremos el array de géneros de esta película y creamos los spans
-  movie.genres.forEach((genre) => {
-    const span = document.createElement("span");
-    span.className = "genre-tag";
-    span.textContent = genre;
-    genresContainer.appendChild(span);
-  });
-
-  // --- INYECTAR ACTORES DINÁMICAMENTE ---
-  const castContainer = document.getElementById("movie-cast");
-  castContainer.innerHTML = ""; // Limpiamos los actores anteriores
-
-  movie.cast.forEach((actor) => {
-    // Usamos Template Literals para inyectar bloques de HTML
-    castContainer.innerHTML += `
-      <div class="cast-item">
-        <img src="${actor.photo}" class="cast-photo" alt="${actor.name}" />
-        <span class="cast-name">${actor.name}</span>
-      </div>
-    `;
-  });
-}
-
-// 3. Darle vida a los botones de "Siguiente" y "Anterior"
-document.getElementById("next-btn").addEventListener("click", () => {
-  // Sumamos 1. Si llegamos al final de la lista, volvemos a la posición 0.
-  currentIndex = (currentIndex + 1) % movies.length;
-  loadMovie(currentIndex); // Cargamos la nueva peli
-});
-
-document.getElementById("prev-btn").addEventListener("click", () => {
-  // Restamos 1. Si estamos en la posición 0, vamos a la última película.
-  currentIndex = (currentIndex - 1 + movies.length) % movies.length;
-  loadMovie(currentIndex); // Cargamos la nueva peli
-});
-
-// 4. Cuando la página termine de cargar, mostramos la primera película automáticamente
-document.addEventListener("DOMContentLoaded", () => {
-  loadMovie(currentIndex);
-});
+// Comprobación para ver si funciona
+console.log("Base de datos de películas cargada:", movies);
