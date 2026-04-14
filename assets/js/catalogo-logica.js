@@ -49,10 +49,8 @@ function renderizarPeliculas(lista) {
     tarjeta.onclick = () =>
       (window.location.href = `detalles.html?id=${pelicula.id}`);
 
-    // Si la peli tiene bgImage usa esa, si no usa la image normal
-    const imagenHorizontal = pelicula.bgImage
-      ? pelicula.bgImage
-      : pelicula.image;
+    // utilizamos la imagen de caratula normal
+    const imagenHorizontal = pelicula.image;
 
     tarjeta.innerHTML = `
       <img src="${imagenHorizontal}" alt="${pelicula.title}" class="catalog-movie-img">
