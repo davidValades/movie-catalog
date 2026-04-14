@@ -58,6 +58,7 @@
     </svg>
 
     <main class="movie-detail-container">
+      <!-- Tarjeta de detalles de película -->
       <div class="movie-card">
         <div class="movie-img-container">
           <div
@@ -71,15 +72,15 @@
           ></div>
           <div class="movie-overlay"></div>
         </div>
-
+        <!-- Contenido de la película -->
         <div class="movie-content">
           <div class="title-row">
             <h1 class="movie-title" id="movie-title">
-              Pulp Fiction <span class="year-badge" id="movie-year">1994</span>
+              <span class="year-badge" id="movie-year"></span>
             </h1>
-            <span class="rating-badge" id="movie-rating">R</span>
+            <span class="rating-badge" id="movie-rating"></span>
           </div>
-
+          <!-- Metadata: duración, géneros -->
           <div class="metadata">
             <div class="duration">
               <svg class="duration-icon" viewBox="0 0 24 24">
@@ -88,15 +89,15 @@
                 />
                 <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
               </svg>
-              <span id="movie-duration">2h 34min</span>
+              <span id="movie-duration"></span>
             </div>
           </div>
-
+          <!-- Géneros -->
           <div class="genres" id="movie-genres">
-            <span class="genre-tag">Crimen</span>
-            <span class="genre-tag">Drama</span>
+            <span class="genre-tag"></span>
+            <span class="genre-tag"></span>
           </div>
-
+          <!-- Calificación -->
           <div class="ratings-row">
             <div class="star-rating">
               <div class="stars">
@@ -126,25 +127,21 @@
                   />
                 </svg>
               </div>
-              <span class="rating-text" id="movie-score">8.9/10</span>
+              <span class="rating-text" id="movie-score"></span>
             </div>
           </div>
-
+          <!-- Detalles -->
           <div class="movie-info-accordions">
-            <details class="custom-accordion" open>
-              <summary class="section-title">SUMMARY</summary>
+            <details class="custom-accordion">
+              <summary class="section-title">DESCRIPCIÓN</summary>
               <div class="accordion-content">
-                <p class="movie-description" id="movie-description">
-                  The lives of two mob hitmen...
-                </p>
+                <p class="movie-description" id="movie-description"></p>
               </div>
             </details>
             <details class="custom-accordion">
               <summary class="section-title">CURIOSIDADES</summary>
               <div class="accordion-content">
-                <p class="movie-description" id="movie-curiosities">
-                  Datos curiosos aquí.
-                </p>
+                <p class="movie-description" id="movie-curiosities"></p>
               </div>
             </details>
             <details class="custom-accordion">
@@ -202,9 +199,7 @@
     </footer>
 
     <script src="/movie-catalog/assets/js/main.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <script src="/movie-catalog/assets/js/movies.js"></script>
-    <script src="/movie-catalog/assets/js/detalles-logica.js"></script>
+    <script src="../assets/js/movies.js"></script>
+    <script src="../assets/js/detalles-logica.js"></script>
   </body>
 </html>

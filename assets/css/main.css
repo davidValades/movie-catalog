@@ -22,11 +22,7 @@
   --bg-color: #f8f7f3;
   --navbar-bg: #ffffff;
   --text-color: #2b2b2b;
-  --primary-color: rgb(
-    0,
-    183,
-    255
-  ); /* Mantenemos tu color principal unificado */
+  --primary-color: rgb(0, 183, 255);
   --card-bg: #dfddd3;
 }
 
@@ -181,7 +177,6 @@ body {
 /* toggle theme */
 ::view-transition-group(root) {
   animation-duration: 0.7s;
-  /* Corregimos la variable por una curva de aceleración real */
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -225,7 +220,7 @@ body {
   }
 }
 
-/* --- SECCIÓN TOP 10 (Números Automáticos) --- */
+/* --- SECCIÓN TOP 10 --- */
 .top10-track {
   counter-reset: ranking;
 }

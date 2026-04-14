@@ -2,37 +2,38 @@
 
 const movies = [
   {
-    id: 1,
-    title: "Pulp Fiction",
-    year: "1994",
+    id: 0,
+    title: "Proyecto Salvación",
+    year: "2026",
     rating: "R",
-    duration: "2h 34min",
-    score: "8.9/10",
-    genres: ["Crimen", "Drama"], // Usamos un array interior para múltiples géneros
-    image: "../../assets/images/pulpFiction.webp", // Ruta a tu imagen
+    duration: "156 min",
+    score: "7.4/10",
+    genres: ["Sci-Fi", "Thriller", "Aventura"], // Usamos un array interior para múltiples géneros
+    image: "../assets/images/proyectoSalvacion.webp", // Ruta a tu imagen
     description:
-      "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-    curiosities: "La palabra 'fuck' se usa 265 veces durante la película.",
+      "El profesor de ciencias Ryland Grace (Ryan Gosling) se despierta en una nave espacial a años luz de casa sin recordar quién es ni cómo ha llegado hasta allí. A medida que recupera la memoria, empieza a descubrir su misión: resolver el enigma de la misteriosa sustancia que provoca la extinción del sol. Deberá recurrir a sus conocimientos científicos y a sus ideas poco ortodoxas para salvar todo lo que hay en la Tierra de la extinción... pero una amistad inesperada significa que quizá no tenga que hacerlo solo",
+    curiosities:
+      "El director de la película, Michel Gondry, es conocido por su estilo visual único y ha dirigido otras películas como 'Eternal Sunshine of the Spotless Mind' y 'The Science of Sleep'.",
     cast: [
       {
-        name: "John Travolta",
-        photo: "https://assets.codepen.io/406785/travolta.jpg",
+        name: "Ryan Gosling",
+        photo: "https://www.filmaffinity.com/es/name.php?name-id=766040752",
       },
       {
-        name: "Samuel L. Jackson",
-        photo: "https://assets.codepen.io/406785/jackson.jpeg",
+        name: "Sandra Hüller",
+        photo: "https://www.filmaffinity.com/es/name.php?name-id=719063480",
       },
     ],
   },
   {
-    id: 2,
+    id: 1,
     title: "El Caballero Oscuro",
     year: "2008",
     rating: "PG-13",
     duration: "2h 32min",
     score: "9.0/10",
     genres: ["Acción", "Crimen", "Drama"],
-    image: "../../assets/images/elCaballeroOscuro.webp",
+    image: "../assets/images/elCaballeroOscuro.webp",
     description:
       "Cuando la amenaza conocida como el Joker emerge de su misterioso pasado, causa estragos y caos en la gente de Gotham.",
     curiosities:
