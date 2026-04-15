@@ -25,6 +25,7 @@ const movies = [
         photo: "https://www.filmaffinity.com/es/name.php?name-id=719063480",
       },
     ],
+    trailer: "https://youtu.be/jz6JB0LCNRs?si=WRTcHBkbS3HDWSE5", // URL del trailer de YouTube
   },
   {
     id: 1,
@@ -44,7 +45,7 @@ const movies = [
       {
         name: "Christian Bale",
         photo: "https://www.filmaffinity.com/es/name.php?name-id=123456789",
-      }, // Puedes rellenar esto luego
+      },
       {
         name: "Heath Ledger",
         photo: "https://www.filmaffinity.com/es/name.php?name-id=987654321",
