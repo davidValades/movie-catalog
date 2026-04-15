@@ -26,7 +26,7 @@
   --card-bg: #dfddd3;
 }
 
-/* Header Navbar Flotante Premium */
+/* Header Navbar */
 header.navbar {
   display: flex;
   position: sticky;
@@ -113,8 +113,10 @@ body {
 }
 
 .carousel-section h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
 }
 
 /* pista de desplazamiento */
@@ -130,6 +132,61 @@ body {
 
 .carousel-track::-webkit-scrollbar {
   display: none; /* ocultar scrollbar en Chrome, Safari y Edge */
+}
+
+/* contenedor del carrusel para posicionar los botones */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: color-mix(in srgb, var(--bg-color) 80%, transparent);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.carousel-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.4);
+}
+
+/* Posicionamiento a los extremos */
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Ocultar botones en móviles para que usen el táctil */
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
 }
 
 /* tarjetas de película */

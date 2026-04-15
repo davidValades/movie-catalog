@@ -43,6 +43,21 @@ function loadMovie(index) {
       </div>
     `;
   });
+
+  // 5. Lógica del botón trailer
+  const trailerLink = document.getElementById("movie-trailer-link");
+
+  if (movie.trailer) {
+    // SI HAY TRÁILER: Lo activamos
+    trailerLink.href = movie.trailer; // Le ponemos la URL de YouTube
+    trailerLink.setAttribute("target", "_blank"); // Hacemos que abra en pestaña nueva
+    trailerLink.classList.remove("disabled"); // Le quitamos el color gris
+  } else {
+    // SI NO HAY TRÁILER: Lo desactivamos
+    trailerLink.removeAttribute("href"); // Quitamos el enlace para que al clicar no recargue la página
+    trailerLink.removeAttribute("target");
+    trailerLink.classList.add("disabled"); // Le ponemos la clase gris y el cursor prohibido
+  }
 }
 
 // Event Listeners de los botones

@@ -318,7 +318,7 @@ a {
 /* BOTONES DE ACCIÓN */
 .action-row {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   gap: 10px;
   align-items: center;
   margin-top: 10px;
@@ -375,6 +375,20 @@ a {
   width: 18px;
   height: 18px;
   fill: currentColor;
+}
+
+.watch-btn.disabled {
+  background-color: #555555; /* Color gris oscuro */
+  cursor: not-allowed; /* El cursor de prohibido 🚫 */
+  box-shadow: none; /* Le quitamos el brillo */
+  opacity: 0.6; /* Lo hacemos un poco transparente */
+}
+
+/* Evitamos que haga el efecto de saltar cuando le pasamos el ratón */
+.watch-btn.disabled:hover {
+  transform: none;
+  background-color: #555555;
+  box-shadow: none;
 }
 
 /*RESPONSIVE  */

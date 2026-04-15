@@ -4,6 +4,28 @@ const btnTheme = document.getElementById("theme-toggle");
 // 🧠 NUEVO: Nada más cargar la página, leemos el bloc de notas (localStorage)
 const temaGuardado = localStorage.getItem("miTema");
 
+// logica de carrusel
+const carousels = document.querySelectorAll(".carousel-wrapper");
+
+carousels.forEach((wrapper) => {
+  const track = wrapper.querySelector(".carousel-track");
+  const prevBtn = wrapper.querySelector(".prev-btn");
+  const nextBtn = wrapper.querySelector(".next-btn");
+
+  // ESCUDO: Si a este carrusel le falta algún botón, no hacemos nada y evitamos errores
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const scrollAmount = 290; // Cantidad a desplazar (220px de tarjeta + 70px de gap)
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+});
+
 // Si el bloc de notas dice que el tema es 'light', le ponemos la clase al HTML y cambiamos el icono
 if (temaGuardado === "light") {
   document.documentElement.classList.add("light");
