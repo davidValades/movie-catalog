@@ -1,6 +1,13 @@
 // assets/js/detalles-logica.js
 
-let currentIndex = 0; // Empezamos en la posición 0 (Proyecto Salvación)
+// 1. Leemos la URL actual de la página
+const parametrosURL = new URLSearchParams(window.location.search);
+
+// 2. Extraemos el valor que va después de "?id="
+const idEnURL = parametrosURL.get("id");
+
+// 3. Si hay un ID en la URL, lo usamos. Si no hay nada (entró directo), cargamos el 0 por defecto.
+let currentIndex = idEnURL !== null ? parseInt(idEnURL) : 0;
 
 function loadMovie(index) {
   const movie = movies[index];
