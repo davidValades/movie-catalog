@@ -1,5 +1,10 @@
 # 🍿 MovieApp - Catálogo de Películas Dinámico
 
+![Status](https://img.shields.io/badge/Estado-En_Progreso_🚀-2ea44f?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
 Proyecto de desarrollo Frontend centrado en la creación de una interfaz de usuario moderna, interactiva y responsive para un catálogo de películas, simulando plataformas de streaming como Netflix o Prime Video.
 
 ## ✨ Funcionalidades Principales
