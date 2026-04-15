@@ -1,45 +1,46 @@
-# 🎬 Movie Catalog App
+# 🍿 MovieApp - Catálogo de Películas Dinámico
 
-![Status](https://img.shields.io/badge/Estado-En_Progreso_🚀-2ea44f?style=for-the-badge)
+Proyecto de desarrollo Frontend centrado en la creación de una interfaz de usuario moderna, interactiva y responsive para un catálogo de películas, simulando plataformas de streaming como Netflix o Prime Video.
 
-¡Bienvenido al repositorio de Movie Catalog! Un proyecto colaborativo desarrollado para aprender y dominar la maquetación web (Frontend) y el control de versiones en equipo.
+## ✨ Funcionalidades Principales
 
-## 🎯 Objetivo del Proyecto
+- **Motor de Catálogo Dinámico:** Página de exploración (`catalogo.html`) que renderiza tarjetas de películas dinámicamente a partir de una base de datos local (`movies.js`).
+- **Búsqueda y Autocompletado:** Buscador en tiempo real que filtra resultados por título y ofrece un menú desplegable de sugerencias.
+- **Filtrado por Categorías:** Sistema de botones interactivos para filtrar el catálogo por géneros (Acción, Sci-Fi, Drama, etc.) usando métodos de array en JavaScript.
+- **Detalles Dinámicos:** Una única plantilla (`detalles.html`) que se recicla inyectando la información (título, sinopsis, cast, imagen de fondo, tráiler de YouTube) de la película seleccionada.
+- **Modo Claro / Oscuro:** Implementación de _Dark Mode_ con guardado de preferencias en el navegador (`localStorage`) para que el tema persista al recargar.
+- **Carruseles Interactivos:** Navegación horizontal con flechas laterales, _scroll-snap_ y efectos _Glassmorphism_.
 
-Crear una plataforma web atractiva y funcional que actúe como un catálogo de películas. Los usuarios podrán explorar los estrenos más recientes en un carrusel interactivo, filtrar por categorías (drama, comedia, etc.), y consultar un Top 10 de las películas más valoradas.
+## 🛠️ Tecnologías Utilizadas
 
-## 🛠️ Tecnologías (Tech Stack)
+- **HTML5 Semántico:** Estructura accesible y modular.
+- **CSS3 Avanzado:** Uso de CSS Grid, Flexbox, variables nativas (`:root`), transiciones y diseño Responsive.
+- **JavaScript (Vanilla ES6):** Manipulación del DOM, eventos, `localStorage`, `filter()`, `forEach()` y control de estado de la UI sin frameworks adicionales.
+- **Git & GitHub:** Control de versiones y flujos de trabajo con ramas (branches).
 
-- **Estructura:** HTML5
-- **Lógica:** JavaScript
-- **Estilos:** CSS3 (Flexbox & Grid)
-- **Control de Versiones:** Git & GitHub
-
-## ✨ Características Principales
-
-- 🌗 **Modo Oscuro Persistente:** Alternancia de temas (Light/Dark) gestionada mediante clases CSS y `localStorage` para recordar la preferencia del usuario.
-- 🎬 **Animaciones Scroll-Driven:** Carrusel con efecto "cover-flow" 3D utilizando las últimas especificaciones de CSS (`animation-timeline: view`).
-- ⚡ **View Transitions API:** Transiciones fluidas y modernas al cambiar el tema de la aplicación, mejorando radicalmente la experiencia de usuario (UX).
-
-## 📂 Arquitectura del Proyecto
-
-Hemos definido una arquitectura modular para evitar conflictos de código entre los desarrolladores:
+## 📁 Estructura del Proyecto
 
 ```text
 movie-catalog/
-├── index.html              # Landing page principal
-├── pages/                  # Vistas secundarias
-│   ├── catalogo.html
-│   ├── categorias.html
-│   ├── top10.html
-│   ├── topPremiadas.html
-│   └── detalles.html
-└── assets/                 # Recursos estáticos
-    ├── css/                # Hojas de estilo modulares
-    │   └── main.css
-    ├── js/                 # Lógica dinámica / localstorage
-    │   └── main.js
-    └── images/             # Posters e iconos
+├── index.html              # Página principal (Home con carruseles)
+├── README.md
+├── assets/
+│   ├── css/
+│   │   ├── main.css            # Estilos globales, Navbar y modo oscuro
+│   │   ├── catalogo/style.css  # Layout del grid y barra de búsqueda
+│   │   └── tarjetas/style.css  # Estilos de la vista de detalles
+│   ├── images/                 # Pósteres y fondos de películas
+│   └── js/
+│       ├── movies.js           # Base de datos (Array de objetos)
+│       ├── main.js             # Lógica global (Tema y Carruseles)
+│       ├── catalogo-logica.js  # Motor de búsqueda y filtrado
+│       └── detalles-logica.js  # Inyección de datos en la tarjeta
+└── pages/
+    ├── catalogo.html       # Vista del explorador de películas
+    ├── detalles.html       # Plantilla dinámica para cada película
+    ├── categorias.html     # (En desarrollo)
+    ├── top10.html          # (En desarrollo)
+    └── topPremiadas.html   # (En desarrollo)
 ```
 
 ## 📖 Guía Rápida para el Equipo (Comandos Git)
