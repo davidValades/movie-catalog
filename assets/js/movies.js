@@ -160,7 +160,7 @@ const movies = [
       { name: "Timothée Chalamet", photo: "" },
       { name: "Zendaya", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=Qv7I3wDfFzI"
   },
   {
     id: 9,
@@ -178,7 +178,7 @@ const movies = [
       { name: "Clint Eastwood", photo: "" },
       { name: "Eli Wallach", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=exJOy6uTkek"
   },
   {
     id: 10,
@@ -196,7 +196,7 @@ const movies = [
       { name: "Christian Bale", photo: "https://www.filmaffinity.com/es/name.php?name-id=123456789" },
       { name: "Heath Ledger", photo: "https://www.filmaffinity.com/es/name.php?name-id=987654321" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=Qs-NylETt1E"
   },
   {
     id: 11,
@@ -214,7 +214,7 @@ const movies = [
       { name: "Marlon Brando", photo: "" },
       { name: "Al Pacino", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=gCVj1LeYnsc"
   },
   {
     id: 12,
@@ -232,7 +232,7 @@ const movies = [
       { name: "Al Pacino", photo: "" },
       { name: "Robert De Niro", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=SBRv7-y3gb8"
   },
   {
     id: 13,
@@ -250,7 +250,7 @@ const movies = [
       { name: "Jean Reno", photo: "" },
       { name: "Natalie Portman", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=aNQqoExfQsg"
   },
   {
     id: 14,
@@ -268,7 +268,7 @@ const movies = [
       { name: "Elijah Wood", photo: "" },
       { name: "Ian McKellen", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=3GJp6p_mgPo"
   },
   {
     id: 15,
@@ -286,7 +286,7 @@ const movies = [
       { name: "Elijah Wood", photo: "" },
       { name: "Viggo Mortensen", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=h-9RYiqyqjk"
   },
   {
     id: 16,
@@ -303,7 +303,7 @@ const movies = [
     cast: [
       { name: "Animación", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=l5zSgSuIDU4"
   },
   {
     id: 17,
@@ -321,7 +321,7 @@ const movies = [
       { name: "Russell Crowe", photo: "" },
       { name: "Joaquin Phoenix", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=P5ieIbInFpg"
   },
   {
     id: 18,
@@ -338,7 +338,7 @@ const movies = [
     cast: [
       { name: "Animación", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=bv0sKzFvpmo"
   },
   {
     id: 19,
@@ -356,7 +356,7 @@ const movies = [
       { name: "Jennifer Lawrence", photo: "" },
       { name: "Josh Hutcherson", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=_8Ktfs2mBDY"
   },
   {
     id: 20,
@@ -374,7 +374,7 @@ const movies = [
       { name: "Matthew McConaughey", photo: "" },
       { name: "Anne Hathaway", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=hhCtMhk8eHo"
   },
   {
     id: 21,
@@ -392,7 +392,7 @@ const movies = [
       { name: "Liam Neeson", photo: "" },
       { name: "Ralph Fiennes", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=BmkchuRJ82w"
   },
   {
     id: 22,
@@ -410,7 +410,7 @@ const movies = [
       { name: "Tom Hardy", photo: "" },
       { name: "Charlize Theron", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=GvsFoGIuRX4"
   },
   {
     id: 23,
@@ -428,7 +428,7 @@ const movies = [
       { name: "Keanu Reeves", photo: "" },
       { name: "Carrie-Anne Moss", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=Pl_H2Lmjn6k"
   },
   {
     id: 24,
@@ -446,7 +446,7 @@ const movies = [
       { name: "Brigitte Helm", photo: "" },
       { name: "Alfred Abel", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=gdtZv3XROnc"
   },
   {
     id: 25,
@@ -464,7 +464,7 @@ const movies = [
       { name: "Jared Leto", photo: "" },
       { name: "Sarah Polley", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=MqIsJuqWy8w"
   },
   {
     id: 26,
@@ -500,7 +500,7 @@ const movies = [
       { name: "John Travolta", photo: "" },
       { name: "Samuel L. Jackson", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
   },
   {
     id: 28,
@@ -517,7 +517,7 @@ const movies = [
     cast: [
       { name: "Documental", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=NTTA-oYcJ3Q"
   },
   {
     id: 29,
@@ -535,7 +535,7 @@ const movies = [
       { name: "Mike Myers", photo: "" },
       { name: "Eddie Murphy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=B88JfTyJ1Fw"
   },
   {
     id: 30,
@@ -553,7 +553,7 @@ const movies = [
       { name: "Jamie Foxx", photo: "" },
       { name: "Tina Fey", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=1PI7e75f3tQ"
   },
   {
     id: 31,
