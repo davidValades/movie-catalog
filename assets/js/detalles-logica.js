@@ -23,12 +23,21 @@ function loadMovie(index) {
   document.getElementById("movie-poster").style.backgroundImage =
     `url('${movie.image}')`;
 
-  // 2. Cambiamos las imágenes dinámicamente
-  document.getElementById("movie-poster").style.backgroundImage =
-    `url('${movie.image}')`;
+// 2. Cambiamos las imágenes dinámicamente
+  
+  const moviePoster = document.getElementById("movie-poster");
+  if (moviePoster) {
+    moviePoster.style.backgroundImage = `url('${movie.image}')`;
+  }
   const container = document.querySelector(".movie-detail-container");
-  container.style.setProperty("--dynamic-bg", `url('${movie.image}')`);
-
+  if (container) {
+    container.style.backgroundImage = `
+      linear-gradient(to bottom, transparent 0%, var(--dark-color) 100%),
+      linear-gradient(to right, var(--dark-color) 0%, var(--bg-overlay) 50%, var(--dark-color) 100%),
+      url('${movie.bgImage}')
+    `;
+  }
+  
   // 3. Inyectamos los géneros
   const genresContainer = document.getElementById("movie-genres");
   genresContainer.innerHTML = "";
