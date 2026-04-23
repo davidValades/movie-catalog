@@ -17,7 +17,7 @@ const movies = [
       { name: "Henry Fonda", photo: "" },
       { name: "Lee J. Cobb", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=TEN-2uTi2c0"
   },
   {
     id: 1,
@@ -34,7 +34,7 @@ const movies = [
     cast: [
       { name: "Pendiente", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=SNbVMk-nLu4"
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const movies = [
       { name: "Sam Worthington", photo: "" },
       { name: "Zoe Saldana", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=CpXJHWSXJW0"
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ const movies = [
       { name: "Harrison Ford", photo: "" },
       { name: "Rutger Hauer", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=eogpIG53Cis"
   },
   {
     id: 4,
@@ -88,7 +88,7 @@ const movies = [
       { name: "Tim Robbins", photo: "" },
       { name: "Morgan Freeman", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=gNS84kTqI3M"
   },
   {
     id: 5,
@@ -106,7 +106,7 @@ const movies = [
       { name: "Natalie Portman", photo: "" },
       { name: "Mila Kunis", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=5jaI1XOB-bs"
   },
   {
     id: 6,
@@ -124,7 +124,7 @@ const movies = [
       { name: "Mel Gibson", photo: "" },
       { name: "Sophie Marceau", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=OwJGElRruv8"
   },
   {
     id: 7,
@@ -142,7 +142,7 @@ const movies = [
       { name: "Gary Oldman", photo: "" },
       { name: "Winona Ryder", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=CjgwUB1CXek"
   },
   {
     id: 8,
