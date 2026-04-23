@@ -571,7 +571,7 @@ const movies = [
       { name: "Chris Pratt", photo: "" },
       { name: "Anya Taylor-Joy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=GuCejewteF8"
   },
   {
     id: 32,
@@ -589,7 +589,7 @@ const movies = [
       { name: "Jim Carrey", photo: "" },
       { name: "Morgan Freeman", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=fe-luzrqWSk"
   },
   {
     id: 33,
@@ -606,7 +606,7 @@ const movies = [
     cast: [
       { name: "Santiago Segura", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=ssV6di8_IWE"
   },
   {
     id: 34,
@@ -624,7 +624,7 @@ const movies = [
       { name: "James Stewart", photo: "" },
       { name: "Kim Novak", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=sSZEpOdNqTw"
   },
   {
     id: 35,
@@ -642,7 +642,7 @@ const movies = [
       { name: "Ben Burtt (Voz)", photo: "" },
       { name: "Elissa Knight (Voz)", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=CZ1CATNbXg0"
   },
   {
     id: 36,
@@ -660,7 +660,7 @@ const movies = [
       { name: "Miles Teller", photo: "" },
       { name: "J.K. Simmons", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=Q7kZy3T6vRM"
   },
   {
     id: 37,
@@ -678,7 +678,7 @@ const movies = [
       { name: "Christian Bale", photo: "" },
       { name: "Liam Neeson", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=neY2xVmOfUM"
   },
   {
     id: 38,
@@ -696,7 +696,7 @@ const movies = [
       { name: "Christian Bale", photo: "" },
       { name: "Tom Hardy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=e0qwi-4iOpE"
   },
   {
     id: 39,
@@ -714,7 +714,7 @@ const movies = [
       { name: "Timothée Chalamet", photo: "" },
       { name: "Rebecca Ferguson", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=mSY_NbSmaUI"
   },
   {
     id: 40,
@@ -732,7 +732,7 @@ const movies = [
       { name: "Elijah Wood", photo: "" },
       { name: "Viggo Mortensen", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=yZLxtW7qq48"
   },
   {
     id: 41,
@@ -750,7 +750,7 @@ const movies = [
       { name: "Paul Mescal", photo: "" },
       { name: "Pedro Pascal", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=HCjuv9STNps"
   },
   {
     id: 42,
@@ -768,7 +768,7 @@ const movies = [
       { name: "Keanu Reeves", photo: "" },
       { name: "Carrie-Anne Moss", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=kYzz0FSgpSU"
   },
   {
     id: 43,
@@ -786,7 +786,7 @@ const movies = [
       { name: "Keanu Reeves", photo: "" },
       { name: "Carrie-Anne Moss", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=hMbexEPAOQI"
   },
   {
     id: 44,
@@ -804,7 +804,7 @@ const movies = [
       { name: "Keanu Reeves", photo: "" },
       { name: "Carrie-Anne Moss", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=9ix7TUGVYIo"
   },
   {
     id: 45,
@@ -822,7 +822,7 @@ const movies = [
       { name: "Mike Myers", photo: "" },
       { name: "Eddie Murphy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=YqBudyS2NXE&list=PLUuSMpmfbqWwpgZiII7REcpdbtOGw3EPa"
   },
   {
     id: 46,
@@ -840,7 +840,7 @@ const movies = [
       { name: "Mike Myers", photo: "" },
       { name: "Eddie Murphy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=MuUwZD2cb4A&list=PLglBQN_Qe_0DS2WBoKj5HFllSb6iuG3aC"
   },
   {
     id: 47,
@@ -858,7 +858,7 @@ const movies = [
       { name: "Mike Myers", photo: "" },
       { name: "Eddie Murphy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=9Z4OzkEzAno"
   },
   {
     id: 48,
@@ -876,7 +876,7 @@ const movies = [
       { name: "Mike Myers", photo: "" },
       { name: "Eddie Murphy", photo: "" }
     ],
-    trailer: ""
+    trailer: "https://www.youtube.com/watch?v=KbiwL74KyJQ&pp=ygUPdHJhaWxlciBTaHJlayA1"
   }
 ];
 
