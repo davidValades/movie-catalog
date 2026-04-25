@@ -7,7 +7,7 @@
 
 Proyecto de desarrollo Frontend centrado en la creación de una interfaz de usuario moderna, interactiva y responsive para un catálogo de películas, simulando plataformas de streaming como Netflix o Prime Video.
 
-![banner](https://ibb.co/Lh26XFnz)
+![banner](https://i.ibb.co/vvKm6FZx/Captura-de-pantalla-2026-04-25-164552.png)
 
 ## ✨ Funcionalidades Principales
 
