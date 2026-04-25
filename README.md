@@ -7,6 +7,8 @@
 
 Proyecto de desarrollo Frontend centrado en la creación de una interfaz de usuario moderna, interactiva y responsive para un catálogo de películas, simulando plataformas de streaming como Netflix o Prime Video.
 
+![banner](https://ibb.co/Lh26XFnz)
+
 ## ✨ Funcionalidades Principales
 
 - **Motor de Catálogo Dinámico:** Página de exploración (`catalogo.html`) que renderiza tarjetas de películas dinámicamente a partir de una base de datos local (`movies.js`).
