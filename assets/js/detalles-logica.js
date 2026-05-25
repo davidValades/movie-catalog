@@ -104,7 +104,6 @@ function loadMovie(index) {
     starsContainer.innerHTML = starsHTML;
     document.getElementById("movie-score").textContent = movie.score;
   }
-  // --- FIN CÓDIGO ESTRELLAS ---
 
   // 5. Lógica del botón trailer
   const trailerLink = document.getElementById("movie-trailer-link");
