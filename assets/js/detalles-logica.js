@@ -23,8 +23,8 @@ function loadMovie(index) {
   document.getElementById("movie-poster").style.backgroundImage =
     `url('${movie.image}')`;
 
-// 2. Cambiamos las imágenes dinámicamente
-  
+  // 2. Cambiamos las imágenes dinámicamente
+
   const moviePoster = document.getElementById("movie-poster");
   if (moviePoster) {
     moviePoster.style.backgroundImage = `url('${movie.image}')`;
@@ -37,7 +37,7 @@ function loadMovie(index) {
       url('${movie.bgImage}')
     `;
   }
-  
+
   // 3. Inyectamos los géneros
   const genresContainer = document.getElementById("movie-genres");
   genresContainer.innerHTML = "";
@@ -59,6 +59,52 @@ function loadMovie(index) {
       </div>
     `;
   });
+
+  // --- INICIO CÓDIGO ESTRELLAS ---
+  const starsContainer = document.querySelector(".stars");
+  let scoreNum = parseFloat(movie.score);
+
+  // Si la película no tiene nota (ej. "N/A"), limpiamos las estrellas
+  if (isNaN(scoreNum)) {
+    starsContainer.innerHTML = "";
+    document.getElementById("movie-score").textContent = "N/A";
+  } else {
+    // Calculamos estrellas completas y el porcentaje de la parcial
+    const fullStars = Math.floor(scoreNum);
+    const decimalPart = scoreNum - fullStars;
+    const percentage = Math.round(decimalPart * 100);
+
+    // Seleccionamos los 'stops' de tu gradiente en el HTML y actualizamos su offset
+    const stops = document.querySelectorAll("#halfGradient stop");
+    if (stops.length >= 2) {
+      stops[0].setAttribute("offset", `${percentage}%`);
+      stops[1].setAttribute("offset", `${percentage}%`);
+    }
+
+    let starsHTML = "";
+    // El path exacto del SVG que usaste en tu HTML
+    const svgPath =
+      "M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z";
+
+    // Bucle para generar siempre 5 estrellas
+    for (let i = 1; i <= 5; i++) {
+      if (i <= fullStars) {
+        // Estrella completa dorada
+        starsHTML += `<svg class="star star-filled" viewBox="0 0 24 24"><path d="${svgPath}"/></svg>`;
+      } else if (i === fullStars + 1 && percentage > 0) {
+        // Estrella parcial usando tu gradiente
+        starsHTML += `<svg class="star star-half" viewBox="0 0 24 24"><path d="${svgPath}"/></svg>`;
+      } else {
+        // Estrella vacía
+        starsHTML += `<svg class="star star-empty" viewBox="0 0 24 24"><path d="${svgPath}"/></svg>`;
+      }
+    }
+
+    // Inyectamos el HTML generado y el texto de la nota
+    starsContainer.innerHTML = starsHTML;
+    document.getElementById("movie-score").textContent = movie.score;
+  }
+  // --- FIN CÓDIGO ESTRELLAS ---
 
   // 5. Lógica del botón trailer
   const trailerLink = document.getElementById("movie-trailer-link");
